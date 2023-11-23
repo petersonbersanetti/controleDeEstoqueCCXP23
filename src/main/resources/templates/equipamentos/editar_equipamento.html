@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://thymeleaf.com.org">
+<div th:replace="shared/header"></div>
+
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">EDIÇÃO DE EQUIPAMENTOS</h1>
+    <p class="mb-4">
+        Altere os dados do Equipamento.
+    </p>
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4" style="padding: 30px">
+        <form method="POST" th:action="@{'/equipamentos/' + ${equipamento?.idRegistro} + '/atualizar'}"
+              onsubmit="return confirm('Confirma o envio dos dados?')">
+            <div class="form-group">
+                <label for="txPatrimonio">Patrimônio</label>
+                <input type="text" class="form-control" th:value="${equipamento?.txPatrimonio}" required
+                       id="txPatrimonio" name="txPatrimonio" placeholder="Edite o número do Patrimônio">
+            </div>
+            <div class="form-group">
+                <label for="txProposta">Proposta</label>
+                <input type="text" class="form-control" th:value="${equipamento?.txProposta}" required id="txProposta"
+                       name="txProposta" placeholder="Edite o número da Proposta">
+            </div>
+            <div class="form-group">
+                <label for="txContrato">Contrato</label>
+                <input type="text" class="form-control" th:value="${equipamento?.txContrato}" required id="txContrato"
+                       name="txContrato" placeholder="Edite o número do Contrato">
+            </div>
+            <div class="form-group">
+                <label for="txLocal">Local</label>
+                <input type="text" class="form-control" th:value="${equipamento?.txLocal}" required id="txLocal"
+                       name="txLocal" placeholder="Edite onde encontra-se o Equipamento">
+            </div>
+            <div class="form-group">
+                <label for="txModelo">Local</label>
+                <input type="text" class="form-control" th:value="${equipamento?.txModelo}" required id="txModelo"
+                       name="txModelo" placeholder="Edite o Modelo do Equipamento">
+            </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Editar Equipamento</button>
+    </form>
+
+</div>
+
+</div>
+</nav>
+
+<div th:replace="shared/footer"></div>

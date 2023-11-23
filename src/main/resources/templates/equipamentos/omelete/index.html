@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://thymeleaf.com.org">
+<div th:replace="shared/header"></div>
+
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">EQUIPAMENTOS CADASTRADOS</h1>
+    <p class="mb-4">Aqui são listados os equipamentos cadastrados.<a target="_blank"</p>
+
+    <!--   <input type="text" id="filtroInput" oninput="filtrarEquipamentos()" placeholder="Digite para filtrar">
+
+       <div th:replace="fragmento/equipamentos/:: equipamentos"></div>
+
+       <script>
+           function filtrarEquipamentos() {
+               var filtro = document.getElementById('filtroInput').value;
+               $.get('/equipamentos/filtrar?filtro=' + filtro, function (data) {
+                   $('#equipamentos').html(data);
+               });
+           }
+
+       </script>-->
+
+       <div class="card-body">
+           <h6 class="m-0 font-weight-bold text-primary">LISTA DE EQUIPAMENTOS CADASTRADOS</h6>
+           <div class="table-responsive">
+                   <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                       <thead>
+                       <tr>
+                           <th>ID</th>
+                           <th>PATRIMÔNIO</th>
+                           <th>DISPONIBILIZADO PARA</th>
+                           <th>MODELO</th>
+                           <th></th>
+                           <th></th>
+                       </tr>
+                       </thead>
+                       <tfoot>
+                       <tr>
+                           <th>ID</th>
+                           <th>PATRIMÔNIO</th>
+                           <th>DISPONIBILIZADO PARA</th>
+                           <th>MODELO</th>
+                           <th></th>
+                           <th></th>
+                       </tr>
+                       </tfoot>
+                       <tbody>
+                       <tr th:each="omelete : ${omeletes}">
+                           <!-- Aluno -->
+                        <td th:text="${omelete.idRegistro}"></td>
+                        <td th:text="${omelete.txPatrimonio}"></td>
+                        <td th:text="${omelete.txLocal}"></td>
+                        <td th:text="${omelete.txModelo}"></td>
+                        <td><a th:href="@{'/equipamentos/omelete/' + ${omelete.idRegistro}}" class="btn btn-warning">Alterar
+                        </td>
+                        <td><a href="#"
+                               th:onclick="'if(confirm(\'Confirma ?\')) { window.location.href = \'' + @{/equipamentos/omelete/{id}(id=${omelete.idRegistro})} + '/excluir\' } '"
+                               class="btn btn-danger">Excluir</td>
+                    </tr>
+                    </tbody>
+                </table>
+        </div>
+    </div>
+</div>
+
+</div>
+</nav>
+
+<div th:replace="shared/footer"></div>

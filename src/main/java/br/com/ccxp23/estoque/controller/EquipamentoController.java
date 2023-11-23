@@ -42,7 +42,7 @@ public class EquipamentoController {
         return "equipamentos/index";
     }
 
- /* 
+ /*
     @GetMapping("/equipamentos/filtrar")
     public String filtrarEquipamentos(@RequestParam("filtro") String filtro, Model model) {
         List<Equipamento> equipamentosFiltrados = equipamentoService.filtrarEquipamentosPorPatrimonio(filtro);

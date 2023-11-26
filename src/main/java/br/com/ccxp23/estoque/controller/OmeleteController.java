@@ -73,11 +73,10 @@ public class OmeleteController {
         return "redirect:/equipamentos/omelete";
     }
 
+
     @GetMapping("/equipamentos/omelete/{id}/excluir")
     public String delete(@PathVariable Long id) {
         omeleteRepository.deleteById(id);
         return "redirect:/equipamentos/omelete";
     }
-
-
 }

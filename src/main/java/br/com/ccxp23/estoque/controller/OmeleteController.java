@@ -31,15 +31,6 @@ public class OmeleteController {
         return "equipamentos/omelete/index";
     }
 
- /*
-    @GetMapping("/equipamentos/filtrar")
-    public String filtrarEquipamentos(@RequestParam("filtro") String filtro, Model model) {
-        List<Equipamento> equipamentosFiltrados = equipamentoService.filtrarEquipamentosPorPatrimonio(filtro);
-        model.addAttribute("equipamentos", equipamentosFiltrados);
-        return "fragmento/equipamentos :: equipamentos";
-    }
- */
-
     @GetMapping("/equipamentos/omelete/novo_equipamento")
     public String equipamento() {
         return "equipamentos/omelete/novo_equipamento";

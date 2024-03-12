@@ -11,7 +11,7 @@ import java.util.List;
 public class OmeleteService {
 
     @Autowired
-    private EquipamentoRepository equipamentoRepository; // Supondo que você tenha um repositório para acessar os dados do equipamento
+    private EquipamentoRepository equipamentoRepository;
 
     public List<Equipamento> obterTodosEquipamentos() {
         return equipamentoRepository.findAll();

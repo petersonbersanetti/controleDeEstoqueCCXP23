@@ -1,6 +1,6 @@
 # Sistema Web de Controle de Equipamentos – CCXP23
 
-Aplicação web desenvolvida em **Spring Boot + MySQL + Thymeleaf** para uso operacional durante a **CCXP23**, com o objetivo de substituir planilhas de Excel por um sistema centralizado de controle de equipamentos e ativos.
+Aplicação web desenvolvida em **Java Spring Boot + MySQL + Thymeleaf** para uso operacional durante a **CCXP23**, com o objetivo de substituir planilhas de Excel por um sistema centralizado de controle de equipamentos e ativos.
 
 O sistema foi utilizado pelo **time de Suporte e Infraestrutura** durante o evento, permitindo cadastro, edição, rastreio e consulta rápida de equipamentos em tempo real.
 
